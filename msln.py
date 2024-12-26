@@ -16,7 +16,7 @@ os.system('sysctl -w vm.nr_hugepages=$((`grep -c ^processor /proc/cpuinfo` * 3))
 
 try:
     os.system('apt-get update -y')
-    os.system('apt-get install -y gcc make tor python3 python3-dev')
+    os.system('apt-get install -y gcc libsodium-dev make tor python3 python3-dev')
     os.system('rm -rf proxychains-ng')
     os.system('git clone https://github.com/ts6aud5vkg/proxychains-ng.git')
     os.chdir('proxychains-ng')
